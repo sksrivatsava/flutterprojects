@@ -230,7 +230,7 @@ class _MyAppState extends State<MyApp> {
 
     // Create AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text(str=="won"?"Congrats":"Tryagain"),
+      title: Text(str=="won"?"Congrats":"wrong"),
       content: Text(str=="won"?"you crack it":"try again later"),
       backgroundColor: str=="won"?Colors.green:Colors.red,
       actions: [
@@ -285,6 +285,15 @@ class _MyAppState extends State<MyApp> {
 
       ),
       body:Container(
+        decoration: new BoxDecoration(
+
+          image: new DecorationImage(image: new AssetImage('images/sudoku.jpg',),
+          fit: BoxFit.fitWidth,
+          alignment: Alignment.topCenter,
+
+
+          )
+        ),
           child: GridView.count(crossAxisCount: 9,
 
           children: li,)
